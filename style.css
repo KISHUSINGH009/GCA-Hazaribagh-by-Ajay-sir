@@ -1,0 +1,54 @@
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --primary: #60a5fa;
+  --accent: #34d399;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text); background: linear-gradient(180deg, #0b1220 0%, #0f172a 100%); }
+.site-header { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 22px; background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,0.06); }
+.brand { font-weight: 800; letter-spacing: .5px; }
+.nav a { color: var(--text); text-decoration: none; margin-left: 14px; }
+.nav a:hover { color: var(--primary); }
+.hero { text-align: center; padding: 80px 20px 48px; }
+.hero h1 { font-size: clamp(28px, 5vw, 44px); margin: 0 0 8px; }
+.hero p { color: var(--muted); margin: 0 0 18px; }
+.btn { display: inline-block; padding: 10px 16px; border-radius: 10px; background: var(--primary); color: #06121f;
+  font-weight: 700; text-decoration: none; border: none; cursor: pointer; }
+.btn:hover { filter: brightness(1.1); }
+.controls { display: grid; grid-template-columns: 1fr 200px; gap: 12px; padding: 12px 20px; max-width: 1024px; margin: 0 auto; }
+.controls input, .controls select { padding: 12px 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12);
+  background: #0c1426; color: var(--text); }
+.courses { max-width: 1024px; margin: 0 auto; padding: 10px 20px 40px; }
+.courses h2 { margin: 10px 0 16px; }
+.course-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.course { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; overflow: hidden;
+  display: flex; flex-direction: column; transition: transform .15s ease, box-shadow .15s ease; }
+.course:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0,0,0,.35); }
+.course img { width: 100%; height: 140px; object-fit: cover; background: #0b1220; }
+.course .body { padding: 14px; display: grid; gap: 6px; }
+.tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 12px; padding: 4px 8px; border-radius: 999px; background: rgba(96,165,250,.15); color: var(--primary);
+  border: 1px solid rgba(96,165,250,.3); }
+.meta { color: var(--muted); font-size: 13px; }
+.price { color: var(--accent); font-weight: 800; margin-top: 6px; }
+.actions { display: flex; gap: 8px; margin-top: 8px; }
+.actions .btn.secondary { background: #162036; color: var(--text); }
+.about, .contact { max-width: 900px; margin: 0 auto; padding: 30px 20px 50px; }
+.highlights { color: var(--muted); }
+.highlights li { margin: 6px 0; }
+.footer { border-top: 1px solid rgba(255,255,255,0.06); text-align: center; padding: 18px; color: var(--muted); }
+/* Modal */
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: grid; place-items: center; }
+.modal.hidden { display: none; }
+.modal-content { width: min(520px, 92vw); background: var(--card); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px; padding: 18px; }
+.close { float: right; border: none; background: transparent; color: var(--text); font-size: 24px; cursor: pointer; }
+form label { display: block; margin-top: 12px; color: var(--muted); }
+form input, form textarea, form select { width: 100%; margin-top: 6px; padding: 12px; border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.12); background: #0c1426; color: var(--text); }
+.status { min-height: 22px; margin-top: 8px; color: var(--accent); font-weight: 600; }

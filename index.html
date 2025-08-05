@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kishu Academy – Computer Courses</title>
+  <meta name="description" content="Learn practical computer skills: Python, Web Dev, Excel, AI tools, and more. Project-based courses with lifetime updates.">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">Kishu Academy</div>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h1>Learn Computer Skills Faster</h1>
+    <p>Practical, project-based courses—designed for real results.</p>
+    <a class="btn" href="#courses">Browse Courses</a>
+  </section>
+
+  <section class="controls">
+    <input id="searchInput" type="text" placeholder="Search courses (e.g., Python, Excel)"/>
+    <select id="levelFilter">
+      <option value="">All Levels</option>
+      <option value="Beginner">Beginner</option>
+      <option value="Intermediate">Intermediate</option>
+      <option value="Advanced">Advanced</option>
+    </select>
+  </section>
+
+  <section id="courses" class="courses">
+    <h2>Featured Courses</h2>
+    <div id="courseGrid" class="course-grid"></div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>Hi, I’m Kishu. I teach job-ready computer skills: coding, data, design, and automation.
+       Short lessons, real projects, and support that actually helps.</p>
+    <ul class="highlights">
+      <li>Project-based curriculum</li>
+      <li>Downloadable resources & templates</li>
+      <li>Lifetime updates</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <form id="contactForm">
+      <label>Name</label>
+      <input type="text" name="name" required />
+      <label>Email</label>
+      <input type="email" name="email" required />
+      <label>Message</label>
+      <textarea name="message" rows="5" required></textarea>
+      <button class="btn" type="submit">Send</button>
+      <p id="contactStatus" class="status"></p>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Kishu Academy. All rights reserved.</p>
+  </footer>
+
+  <!-- Enroll Modal -->
+  <div id="enrollModal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeModal" class="close">×</button>
+      <h3 id="modalTitle">Enroll</h3>
+      <p id="modalSubtitle"></p>
+      <form id="enrollForm">
+        <label>Your Name</label>
+        <input type="text" name="studentName" required />
+        <label>Your Email</label>
+        <input type="email" name="studentEmail" required />
+        <button class="btn" type="submit">Request Access</button>
+        <p id="enrollStatus" class="status"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
